@@ -28,7 +28,10 @@
       eeee
         </div>
         <div region="center" border="false" style="overflow:hidden">
-            <iframe id="cc" scrolling="auto" frameborder="0" style="width:100%;height:100%"></iframe>
+           <%-- <iframe id="cc" scrolling="auto" frameborder="0" style="width:100%;height:100%"></iframe>--%>
+               <div class="easyui-tabs" fit="true" border="false" id="tabs">
+                   <div title="首页">欢迎来到Hbase价格库存查询页面</div>
+               </div>
         </div>
     </div>
 </div>

@@ -19,27 +19,11 @@ public class PageChangeController {
         return mv;
     }
 
-    /*新增页*/
-    @RequestMapping(value = "toAddUserPage.do",method = RequestMethod.GET)
-    public ModelAndView toAddUserPage(){
+    /*用户管理页面*/
+    @RequestMapping(value = "userManagePage.do",method = RequestMethod.GET)
+    public ModelAndView userManagePage(){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("addUserPage");
-        return mv;
-    }
-
-    /*修改页*/
-    @RequestMapping(value = "toUpdatePage.do",method = RequestMethod.GET)
-    public ModelAndView toUpdatePage(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("updatePage");
-        return mv;
-    }
-
-    /*删除页*/
-    @RequestMapping(value = "toDeletePage.do",method = RequestMethod.GET)
-    public ModelAndView toDeletePage(){
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("deletePage");
+        mv.setViewName("/userManagePage");
         return mv;
     }
 

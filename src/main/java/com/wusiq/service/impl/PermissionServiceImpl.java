@@ -1,6 +1,7 @@
 package com.wusiq.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.wusiq.Dto.req.ReqQueryPermissionListDto;
 import com.wusiq.Dto.rsp.RspQueryCatalogTreeListDto;
 import com.wusiq.base.CatalogTreeUtils;
 import com.wusiq.dao.PermissionDao;
@@ -26,22 +27,21 @@ public class PermissionServiceImpl implements PermissionService {
      * 获取权限列表
      */
     @Override
-    public List<RspQueryCatalogTreeListDto> queryPermissionList(PermissionEntity perm) {
+    public List<PermissionEntity> queryPermissionList(ReqQueryPermissionListDto perm) {
         LOGGER.info("PermissionServiceImpl.queryPermissionList.start...");
         //获取目录数据
-        List<PermissionEntity> catalogList = catalogTreeDao.queryPermissionList(perm);
-        LOGGER.info("catalogList:{}",JSON.toJSONString(catalogList));
+        List<PermissionEntity> permissionList = catalogTreeDao.queryPermissionList(perm);
         //将目录数据组织成树格式
-        List<RspQueryCatalogTreeListDto> list = CatalogTreeUtils.list2Catalog(catalogList);
-        LOGGER.info("PermissionServiceImpl.queryPermissionList.end.result:{}",JSON.toJSONString(list));
-        return list;
+        //List<RspQueryCatalogTreeListDto> list = CatalogTreeUtils.list2Catalog(catalogList);
+        LOGGER.info("PermissionServiceImpl.queryPermissionList.end.result:{}",JSON.toJSONString(permissionList));
+        return permissionList;
     }
 
     /**
      * 获取目录列表
      */
     @Override
-    public List<RspQueryCatalogTreeListDto> queryCatalogList(PermissionEntity perm) {
+    public List<RspQueryCatalogTreeListDto> queryCatalogList(ReqQueryPermissionListDto perm) {
         LOGGER.info("PermissionServiceImpl.queryCatalogList.start...");
         //获取目录数据
         List<PermissionEntity> catalogList = catalogTreeDao.queryCatalogList(perm);

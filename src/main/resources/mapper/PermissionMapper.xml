@@ -30,7 +30,7 @@
     </sql>
 
     <!--查询权限列表-->
-    <select id="queryPermissionList" parameterType="com.wusiq.entity.PermissionEntity" resultMap="permissionMap">
+    <select id="queryPermissionList" parameterType="com.wusiq.Dto.req.ReqQueryPermissionListDto" resultMap="permissionMap">
         select
         <include refid="PERMISSION_COLUMN"/>
         from t_permission
@@ -59,7 +59,7 @@
     </select>
 
     <!--查询目录列表(全目录)-->
-    <select id="queryCatalogList" parameterType="com.wusiq.entity.PermissionEntity" resultMap="permissionMap">
+    <select id="queryCatalogList" parameterType="com.wusiq.Dto.req.ReqQueryPermissionListDto" resultMap="permissionMap">
         select
         <include refid="PERMISSION_COLUMN"/>
         from t_permission

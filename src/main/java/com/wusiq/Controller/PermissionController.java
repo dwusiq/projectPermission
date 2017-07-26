@@ -1,6 +1,7 @@
 package com.wusiq.Controller;
 
 import com.alibaba.fastjson.JSON;
+import com.wusiq.Dto.req.ReqQueryPermissionListDto;
 import com.wusiq.Dto.rsp.RspQueryCatalogTreeListDto;
 import com.wusiq.entity.PermissionEntity;
 import com.wusiq.service.PermissionService;
@@ -26,9 +27,9 @@ public class PermissionController {
     PermissionService catalogService;
 
     @RequestMapping(value = "/queryPermissionList.json",method = RequestMethod.GET)
-    public String queryPermissionList(){
-        LOGGER.info("PermissionController.queryPermissionList.start...");
-        List<RspQueryCatalogTreeListDto> list = catalogService.queryPermissionList(null);
+    public String queryPermissionList(ReqQueryPermissionListDto req){
+        LOGGER.info("PermissionController.queryPermissionList.start.param:{}",JSON.toJSONString(req));
+        List<PermissionEntity> list = catalogService.queryPermissionList(req);
         LOGGER.info("PermissionController.queryPermissionList.end.result:{}", JSON.toJSONString(list));
 
         return JSON.toJSONString(list);
@@ -37,7 +38,7 @@ public class PermissionController {
     @RequestMapping(value = "/queryCatalogTreeList.json",method = RequestMethod.GET)
     public String queryCatalogTreeList(){
         LOGGER.info("PermissionController.queryCatalogTreeList.start...");
-        PermissionEntity perm = new PermissionEntity();
+        ReqQueryPermissionListDto perm = new ReqQueryPermissionListDto();
         List<RspQueryCatalogTreeListDto> list = catalogService.queryCatalogList(perm);
         LOGGER.info("PermissionController.queryCatalogTreeList.end.result:{}", JSON.toJSONString(list));
 

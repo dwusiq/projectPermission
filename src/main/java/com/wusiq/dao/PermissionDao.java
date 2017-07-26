@@ -1,5 +1,6 @@
 package com.wusiq.dao;
 
+import com.wusiq.Dto.req.ReqQueryPermissionListDto;
 import com.wusiq.entity.PermissionEntity;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface PermissionDao {
     //获取权限列表
-    List<PermissionEntity> queryPermissionList(PermissionEntity perm);
+    List<PermissionEntity> queryPermissionList(ReqQueryPermissionListDto perm);
     /*查询目录列表*/
-    List<PermissionEntity> queryCatalogList(PermissionEntity perm);
+    List<PermissionEntity> queryCatalogList(ReqQueryPermissionListDto perm);
 }
