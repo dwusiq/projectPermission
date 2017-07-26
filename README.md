@@ -10,5 +10,6 @@
 10、请求参数中文乱码处理；
 11、jedis；
 12、springMVC控制器返回字符串；
-13、easyui(layout、tree)
-14、权限管理
+13、easyui(layout、tree)；
+14、权限管理；
+15、js控制iframe子页面的元素
