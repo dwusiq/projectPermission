@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50550
 File Encoding         : 65001
 
-Date: 2017-07-26 15:16:57
+Date: 2017-07-26 17:37:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,6 +41,6 @@ CREATE TABLE `t_permission` (
 -- ----------------------------
 INSERT INTO `t_permission` VALUES ('0010001', 'testAdm', null, '0', '0', null, '0020001', '2017-07-24 15:13:10', null, null, '测试管理台', '0', '0');
 INSERT INTO `t_permission` VALUES ('0010002', 'testAdm_userManage', null, '0', '1', '0010001', '0020001', '2017-07-24 15:15:10', null, null, '用户管理模块', '0', '1');
-INSERT INTO `t_permission` VALUES ('0010003', 'testAdm_userManage_userManagePage', null, '0', '2', '0010002', '0020001', '2017-07-24 15:16:59', null, null, '用户管理', '0', '1');
+INSERT INTO `t_permission` VALUES ('0010003', 'testAdm_userManage_userManagePage', '{\"url\":\"/projectPermission/pageChange/userManagePage.do\"}', '0', '2', '0010002', '0020001', '2017-07-24 15:16:59', null, null, '用户管理', '0', '1');
 INSERT INTO `t_permission` VALUES ('0010004', 'testAdm_userManage_userManagePage_queryUser', null, '0', '3', '0010003', '0020001', '2017-07-24 15:20:09', null, null, '查询用户信息', '0', '');
 INSERT INTO `t_permission` VALUES ('0010005', 'testAdm_userManage_userManagePage_addUser', null, '0', '3', '0010003', '0020001', '2017-07-24 15:21:38', null, null, '添加用户信息', '0', '');
