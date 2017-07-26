@@ -3,6 +3,7 @@ package com.wusiq.base;
 import com.alibaba.fastjson.JSON;
 import com.wusiq.Dto.rsp.RspQueryCatalogTreeListDto;
 import com.wusiq.entity.PermissionEntity;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,8 +64,11 @@ public class CatalogTreeUtils {
                 childCatalog.setState(catalogTreeEntity.getResState().equals("0")?"open":"close");//状态
 
                 //目录的其他属性
+                String resContent = catalogTreeEntity.getResContent();
                 Map<String,Object> attributes = new HashMap<>();
-               // attributes.put("url",catalogTreeEntity.getUrl());
+                if(StringUtils.isNotBlank(resContent)){
+                    attributes = JSON.parseObject(resContent);
+                }
                 childCatalog.setAttributes(attributes);//其他属性
 
                 //继续获取更下一层的所有子目录

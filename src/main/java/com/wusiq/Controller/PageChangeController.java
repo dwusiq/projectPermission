@@ -1,9 +1,14 @@
 package com.wusiq.Controller;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 用于切换页面的控制器
@@ -26,6 +31,4 @@ public class PageChangeController {
         mv.setViewName("/userManagePage");
         return mv;
     }
-
-
 }

@@ -126,4 +126,37 @@ public class PermissionEntity implements Serializable{
     public void setResState(String resState) {
         this.resState = resState;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"resCode\":\"")
+                .append(resCode).append('\"');
+        sb.append(",\"resName\":\"")
+                .append(resName).append('\"');
+        sb.append(",\"resContent\":\"")
+                .append(resContent).append('\"');
+        sb.append(",\"resStatus\":\"")
+                .append(resStatus).append('\"');
+        sb.append(",\"resType\":\"")
+                .append(resType).append('\"');
+        sb.append(",\"resParent\":\"")
+                .append(resParent).append('\"');
+        sb.append(",\"createUser\":\"")
+                .append(createUser).append('\"');
+        sb.append(",\"createDate\":\"")
+                .append(createDate).append('\"');
+        sb.append(",\"updateUser\":\"")
+                .append(updateUser).append('\"');
+        sb.append(",\"updateDate\":\"")
+                .append(updateDate).append('\"');
+        sb.append(",\"resDescription\":\"")
+                .append(resDescription).append('\"');
+        sb.append(",\"resSequence\":")
+                .append(resSequence);
+        sb.append(",\"resState\":\"")
+                .append(resState).append('\"');
+        sb.append('}');
+        return sb.toString();
+    }
 }
