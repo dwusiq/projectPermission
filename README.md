@@ -12,4 +12,4 @@
 12、springMVC控制器返回字符串；
 13、easyui(layout、tree)；
 14、权限管理；
-15、js控制iframe子页面的元素
+15、js控制iframe子页面的控件（处理有时候子页面未加载完获取不到控件的问题）
