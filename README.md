@@ -8,8 +8,7 @@
 8、ajax请求
 9、web.xml；
 10、请求参数中文乱码处理；
-11、jedis；
-12、springMVC控制器返回字符串；
-13、easyui(layout、tree)；
-14、权限管理；
-15、js控制iframe子页面的控件（处理有时候子页面未加载完获取不到控件的问题）
+11、springMVC控制器返回字符串；
+12、easyui(layout、tree)；
+13、权限管理；
+14、js控制iframe子页面的控件（处理有时候子页面未加载完获取不到控件的问题）
